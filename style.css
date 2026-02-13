@@ -5,19 +5,19 @@
 }
 
 body {
-    /* background-color: #FFE4E8; */ 
     font-family: 'Nunito', sans-serif;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    background-image:
+/*    background-image:
         radial-gradient(circle at 15% 85%, #ffb3c1 0%, transparent 40%),
         radial-gradient(circle at 85% 15%, #ff8fa3 0%, transparent 40%),
         radial-gradient(circle at 50% 50%, #fff0f3 0%, transparent 60%);
 }
-    
+*/    
+    background-color: #FFE4E8;
     
 /* Blurred Custom Background */
 body::before {
@@ -25,8 +25,10 @@ body::before {
     position: fixed;
     inset: 0;
     background: url("bg.png") center/cover no-repeat;
-    filter: blur(1px); */
-    transform: scale(1.1); /* prevents edge cut after blur */
+    filter: blur(5px); */
+    transform: scale(1.12); /* prevents edge cut after blur */
+    
+    will-change: transform, filter; /* for more Safari/Chrome support*/
     z-index: -2;
 }
 
