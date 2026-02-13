@@ -1,3 +1,7 @@
+html, body {
+  height: 100%;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,6 +9,7 @@
 }
 
 body {
+    margin: 0;
     font-family: 'Nunito', sans-serif;
     min-height: 100vh;
     display: flex;
@@ -17,20 +22,21 @@ body {
         radial-gradient(circle at 50% 50%, #fff0f3 0%, transparent 60%);
 }
 */    
+    position: relative;
     background-color: #FFE4E8;
     
 /* Blurred Custom Background */
 body::before {
-    outline: 5px solid lime;
     content: "";
     position: fixed;
     inset: 0;
     background: url("delete.png") center/cover no-repeat;
-    filter: blur(5px);
+    filter: blur(14px);
     transform: scale(1.12); /* prevents edge cut after blur */
     
     will-change: transform, filter; /* for more Safari/Chrome support*/
-    z-index: -2;
+    z-index: 0;
+    pointer-events: none;
 }
 
 /* Soft romantic overlay */
@@ -39,7 +45,8 @@ body::after {
     position: fixed;
     inset: 0;
     background: rgba(255, 182, 193, 0.25);
-    z-index: -1;
+    z-index: 1;
+    pointer-events: none;
 }
 
 /* Floating hearts background */
@@ -47,7 +54,7 @@ body::after {
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
     pointer-events: none;
-    z-index: 0;
+    z-index: 2;
     overflow: hidden;
 }
 
@@ -76,7 +83,7 @@ body::after {
 
 .container {
     position: relative;
-    z-index: 1;
+    z-index: 3;
     text-align: center;
     padding: 40px 20px;
 }
