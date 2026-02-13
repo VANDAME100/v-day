@@ -26,7 +26,7 @@ body::before {
     position: fixed;
     inset: 0;
     background: url("bg.png") center/cover no-repeat;
-    filter: blur(5px); */
+    filter: blur(5px);
     transform: scale(1.12); /* prevents edge cut after blur */
     
     will-change: transform, filter; /* for more Safari/Chrome support*/
