@@ -259,3 +259,20 @@ body::after {
 
 .hearts-bg { z-index: 2 !important; }
 .container { z-index: 3 !important; }
+
+.bg-layer{
+  position:fixed; inset:0;
+  background:url("./bg.png") center/cover no-repeat;
+  filter:blur(12px);
+  transform:scale(1.12);
+  z-index:0;
+  pointer-events:none;
+}
+.overlay-layer{
+  position:fixed; inset:0;
+  background:rgba(255,182,193,0.25);
+  z-index:1;
+  pointer-events:none;
+}
+.hearts-bg{ position:fixed; inset:0; z-index:2; }
+.container{ position:relative; z-index:3; }
