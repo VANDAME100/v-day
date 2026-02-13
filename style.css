@@ -25,7 +25,7 @@ body::before {
     position: fixed;
     inset: 0;
     background: url("bg.png") center/cover no-repeat;
-    filter: blur(14px);
+    filter: blur(4px);
     transform: scale(1.1); /* prevents edge cut after blur */
     z-index: -2;
 }
